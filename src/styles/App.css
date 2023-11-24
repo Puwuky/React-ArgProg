@@ -1,0 +1,154 @@
+/* App.css */
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.task-item.completed {
+  background-color: #f0f0f0; 
+}
+
+.task-item span {
+  flex-grow: 1;
+  margin-right: 10px;
+  transition: text-decoration 0.3s;
+}
+
+.task-item::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #888; 
+  margin-right: 10px;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  font-size: 12px;
+}
+
+.task-item.completed::before {
+  background-color: #2ecc71; 
+  content: '✔'; 
+}
+
+.task-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.task-buttons button {
+  margin-left: 5px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.task-buttons button.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.task-buttons button.save-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.task-buttons button.edit-btn {
+  background-color: #f39c12;
+  color: white;
+}
+
+.task-buttons button.complete-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.task-form {
+  display: flex;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.task-form input {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.task-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirmation-dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-dialog.open {
+  display: flex;
+}
+
+.confirmation-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.confirmation-buttons button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.confirmation-buttons .confirm-btn {
+  background-color: #4caf50;
+  color: #fff;
+  border: 1px solid #4caf50;
+}
+
+.confirmation-buttons .cancel-btn {
+  background-color: #f44336;
+  color: #fff;
+  border: 1px solid #f44336;
+}
